@@ -1,0 +1,188 @@
+
+
+$color:#3F5D45;
+$color2:#EAF0ED;
+
+*{
+  color: #3F5D45;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.container {
+    width: 940px;
+    margin: 0 auto;
+
+}
+a{
+    text-decoration: none;
+}
+header{
+    margin-top: 40px;
+    .container{
+        display: flex;
+    }
+    .logo img{
+        height: 40px;
+        object-fit: contain;
+    }
+    ul{
+        margin-left: auto;
+        display: flex;
+    }
+    li a{
+        height: 40px;
+        padding: 0 20px;
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+    }
+     li a.cart{
+         padding-right: 0;
+     }
+}
+.banner{
+    margin-top: 30px;
+}
+.products{
+    margin-top: 60px;
+    display: flex;
+    margin-right: -10px;
+    margin-left: -10px;
+
+    .side-bar-wrap{
+        width: 33.333%;
+        padding-right: 10px;
+        padding-left: 10px;
+
+        li{
+
+            &.side-bar-title, a{
+                height: 65px;
+                border: 1px solid $color2;
+                border-top-color: transparent;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px;
+            }
+            &.side-bar-title{
+                background-color: $color;
+                color: $color2;
+            }
+
+            & a:hover{
+                background-color: $color2;
+            }
+        }
+
+
+
+    }
+
+    .products-list-wrap{
+        width: 66.6666%;
+        display: flex;
+        flex-wrap: wrap;
+
+        li{
+        width: 50%;
+        margin-bottom: 20px;
+
+            .item{
+                border: 1px solid $color2;
+                position: relative;
+                margin-right: 10px;
+                margin-left: 10px;
+            }
+            img{
+                width: 100%;
+                display: block;
+                padding: 0;
+                margin: 0;
+            }
+
+            .content{
+                display: flex;
+                height: 56px;
+
+                .title ,.price{
+                    font-size: 20px;
+                    font-weight: 300;
+                    width: 60%;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                }
+                .price{
+                     width: 40%;
+                    font-weight: 600;
+                    border-left:1px solid $color2;
+                }
+            }
+            .add-cart{
+                background-color: $color2;
+                height: 65px;
+                text-align: center;
+                font-size: 24px;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .tab{
+                position: absolute;
+                left: 20px;
+                top: 0;
+                background-color: $color;
+                color: $color2;
+                padding: 10px;
+                -webkit-writing-mode: vertical-lr;
+                writing-mode: vertical-lrl;
+                font-weight: 600;
+                letter-spacing: 5px;
+                text-indent: 5px;
+            }
+        }
+    }
+
+
+}
+.pagination{
+    margin-top: 30px;
+    margin-bottom: 60px;
+    display: flex;
+   justify-content: flex-end;
+
+
+    .pagination-btn a{
+        font-size: 20px;
+        width: 60px;
+        height: 60px;
+        border: 1px solid $color2;
+        border-right-color:transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover{
+            background-color: $color2;
+        }
+
+        &.active{
+            border: 1px solid $color;
+            background-color: $color;
+            color: $color2;
+            font-weight: 600;
+        }
+    }
+
+    .pagination-btn:last-of-type a{
+           border-right-color:$color2 ;
+        }
+}
